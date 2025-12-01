@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { withBasePath } from "../utils/withBasePath";
 
 interface Props {
     title: string;
@@ -9,7 +10,7 @@ interface Props {
     backLink?: string;
 }
 
-const { title, pageTitle, subtitle, description, backLink = import.meta.env.BASE_URL } = Astro.props;
+const { title, pageTitle, subtitle, description, backLink = withBasePath() } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>

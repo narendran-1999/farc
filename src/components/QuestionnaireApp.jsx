@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { FARC_CONFIG } from '../data/questionnaire';
 import { calculateCRS, getRiskTier, getTopContributors } from '../utils/scoring';
+import { withBasePath } from '../utils/withBasePath';
 import ProgressBar from './ProgressBar';
 
 const QuestionnaireApp = () => {
@@ -79,11 +80,11 @@ const QuestionnaireApp = () => {
                     </div>
 
                     <div className="mt-8 flex justify-center gap-6 text-sm">
-                        <a href={`${import.meta.env.BASE_URL}predictors`} className="text-blue-400 hover:text-blue-300 transition-colors">Strongest Predictors</a>
+                        <a href={withBasePath('predictors')} className="text-blue-400 hover:text-blue-300 transition-colors">Strongest Predictors</a>
                         <span className="text-gray-600">|</span>
-                        <a href={`${import.meta.env.BASE_URL}references`} className="text-blue-400 hover:text-blue-300 transition-colors">Research Sources</a>
+                        <a href={withBasePath('references')} className="text-blue-400 hover:text-blue-300 transition-colors">Research Sources</a>
                         <span className="text-gray-600">|</span>
-                        <a href={`${import.meta.env.BASE_URL}privacy`} className="text-blue-400 hover:text-blue-300 transition-colors">Privacy</a>
+                        <a href={withBasePath('privacy')} className="text-blue-400 hover:text-blue-300 transition-colors">Privacy</a>
                     </div>
                 </div>
             </div>
@@ -193,11 +194,11 @@ const QuestionnaireApp = () => {
                 </button>
 
                 <div className="mt-6 flex justify-center gap-6 text-sm">
-                    <a href={`${import.meta.env.BASE_URL}predictors`} className="text-blue-400 hover:text-blue-300 transition-colors">Strongest Predictors</a>
+                    <a href={withBasePath('predictors')} className="text-blue-400 hover:text-blue-300 transition-colors">Strongest Predictors</a>
                     <span className="text-gray-600">|</span>
-                    <a href={`${import.meta.env.BASE_URL}references`} className="text-blue-400 hover:text-blue-300 transition-colors">Research Sources</a>
+                    <a href={withBasePath('references')} className="text-blue-400 hover:text-blue-300 transition-colors">Research Sources</a>
                     <span className="text-gray-600">|</span>
-                    <a href={`${import.meta.env.BASE_URL}privacy`} className="text-blue-400 hover:text-blue-300 transition-colors">Privacy</a>
+                    <a href={withBasePath('privacy')} className="text-blue-400 hover:text-blue-300 transition-colors">Privacy</a>
                 </div>
             </div>
         );

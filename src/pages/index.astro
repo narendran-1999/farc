@@ -1,6 +1,7 @@
 ---
 import QuestionnaireApp from "../components/QuestionnaireApp";
 import "../styles/global.css";
+import { withBasePath } from "../utils/withBasePath";
 ---
 
 <html lang="en">
@@ -9,7 +10,7 @@ import "../styles/global.css";
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href={`${import.meta.env.BASE_URL}favicon.svg`}
+			href={withBasePath("favicon.svg")}
 		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
