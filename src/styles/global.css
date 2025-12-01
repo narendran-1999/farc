@@ -397,6 +397,20 @@ body {
   text-decoration: none;
 }
 
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.link-row__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Result Details Box */
 .result-details-box {
   background: rgba(0, 0, 0, 0.2);
