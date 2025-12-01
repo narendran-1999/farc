@@ -171,7 +171,9 @@ import ContentPageLayout from "../layouts/ContentPageLayout.astro";
     </div>
 
     <div class="footer-links" slot="footer">
-        <a href="/predictors" class="footer-link">View Strongest Predictors</a>
+        <a href={`${import.meta.env.BASE_URL}predictors`} class="footer-link"
+            >View Strongest Predictors</a
+        >
     </div>
 </ContentPageLayout>
 
