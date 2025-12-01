@@ -7,5 +7,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://narendran-1999.github.io',
   base: '/farc',
+  trailingSlash: 'always',
+  output: 'static',
   integrations: [react()]
 });
