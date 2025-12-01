@@ -6,7 +6,7 @@ export const FARC_CONFIG = {
     { label: "Disagree", value: 1 },
     { label: "Agree", value: 2 },
     { label: "Strongly agree", value: 3 },
-    { label: "I don't have enough information to judge this", value: null }
+    { label: "I don't have enough information to judge this", value: 0 }
   ],
 
   classifierQuestion: "Have you interacted with her personally (talking, dating, texting beyond surface-level), or are you evaluating purely based on public/visible information?",
@@ -17,7 +17,7 @@ export const FARC_CONFIG = {
     { label: "I don't really know anything", value: "none" }
   ],
 
-  // Questions are to be ignored if information is inadequate (value === null)
+  // Note: N/A option (value 0) is treated the same as "Strongly disagree" in scoring
 
   // SET 1 — Before Interaction (publicly observable)
   set1: [

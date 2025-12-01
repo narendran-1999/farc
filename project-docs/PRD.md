@@ -39,12 +39,12 @@ The primary target audience is men who are actively dating and want a structured
 4.  **Score Calculation & Results**:
     *   Upon completion, the application will calculate and display the "Cheat-Risk Score" (CRS) as a number from 0-100.
     *   The CRS will be accompanied by a risk tier:
-        *   0-19: Low
-        *   20-39: Moderate
-        *   40-59: Elevated
-        *   60-79: High
-        *   80-100: Very High
-    *   The results page will also display the **top 3 contributing factors** to the score, showing the specific question and its percentage contribution.
+        *   0-19: Minimal Risk
+        *   20-39: Low-Moderate Risk
+        *   40-59: Elevated Risk
+        *   60-79: High Risk
+        *   80-100: Critical Risk
+    *   The results page will also display the **top 3 contributing factors** to the score, showing the specific question ranked by contribution (displayed as ranking numbers 1, 2, 3).
 
 ### 3.2. Scoring Logic
 
@@ -56,20 +56,35 @@ The scoring logic must be implemented exactly as specified in the `questions-n-s
 
 ### 3.3. Non-Functional Requirements
 
-*   **Technology Stack**: The application will be built using Astro and React.
-*   **Deployment**: The application will be deployed to GitHub Pages.
+*   **Technology Stack**: The application is built using Astro v5.16.0 and React v19.2.0.
+*   **Deployment**: The application is deployed to GitHub Pages at `narendran-1999.github.io/farc`.
 *   **User Interface**: The UI should be clean, simple, and easy to navigate. It should be responsive and work well on both desktop and mobile devices.
 *   **Privacy**: The application will not store any user data. All calculations will be done on the client-side.
 
+### 3.4. Additional Pages
+
+The application includes the following additional informational pages:
+
+*   **Predictors Page** (`/predictors`): Displays the strongest predictors of infidelity based on research, organized into "Before Interaction" and "After Interaction" categories.
+*   **References Page** (`/references`): Lists all research sources and citations used in the calculator.
+*   **Privacy Page** (`/privacy`): Explains the privacy guarantees of the tool (client-side only, no data storage).
+
 ## 4. User Interface & User Experience (UI/UX)
 
-*   **Start Screen**: A clear and concise introduction to the tool, including the disclaimer. The initial classification question will be presented here.
+*   **Layout System**: The application uses a reusable layout system with `BaseLayout` (common HTML boilerplate) and `ContentPageLayout` (for content pages with back navigation).
+*   **Start Screen**: A clear and concise introduction to the tool, including the disclaimer. The initial classification question is presented here with links to Predictors, References, and Privacy pages.
 *   **Questionnaire Screen**:
-    *   Questions should be presented one at a time or in a clear, scrollable list.
-    *   The user's progress should be visible (e.g., "Question 3 of 15").
-    *   The options for each question should be presented as radio buttons or a similar selection method.
+    *   Questions are presented one at a time with a progress bar showing current position.
+    *   The user's progress is visible via the progress bar component.
+    *   The options for each question are presented as stacked buttons.
 *   **Results Screen**:
-    *   The CRS should be prominently displayed.
-    *   The risk tier should be clearly stated.
-    *   The top 3 contributors should be listed with their descriptions and contribution percentages.
-    *   A "Start Over" button should be provided to allow the user to retake the questionnaire.
+    *   The CRS is prominently displayed in a colored circle.
+    *   The risk tier is clearly stated with color-coded styling:
+        *   0-19: Minimal Risk
+        *   20-39: Low-Moderate Risk
+        *   40-59: Elevated Risk
+        *   60-79: High Risk
+        *   80-100: Critical Risk
+    *   The top 3 contributors are listed with ranking numbers (1, 2, 3) and their question text.
+    *   A "Start Over" button is provided to allow the user to retake the questionnaire.
+    *   Links to Predictors, References, and Privacy pages are available.

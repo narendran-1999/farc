@@ -56,7 +56,7 @@ User answers each statement on the scale:
 1   = Disagree
 2   = Agree
 3   = Strongly agree
-N/A = I don’t have enough information to judge this
+N/A = I don't have enough information to judge this (treated as 0 in scoring)
 
 For each item:
 `item-points = user-score * (item-max-points / 3)`
@@ -80,12 +80,12 @@ Normalize to 0–100:
 
 ---
 
-## **4. Risk tiers (unchanged from PRD)**
-0–19 → Low
-20–39 → Moderate
-40–59 → Elevated
-60–79 → High
-80–100 → Very High
+## **4. Risk tiers**
+0–19 → Minimal Risk
+20–39 → Low-Moderate Risk
+40–59 → Elevated Risk
+60–79 → High Risk
+80–100 → Critical Risk
 
 ---
 
@@ -94,4 +94,4 @@ Normalize to 0–100:
 For each answered item:
 `contribution-pct = item-points / sum-points * 100` (if sum-points > 0)
 
-Sort items by contribution-pct descending and show top 3 contributors with their statements, numeric contribution, and short explanation.
+Sort items by contribution-pct descending and show top 3 contributors with their statements displayed with ranking numbers (1, 2, 3) in the UI.
