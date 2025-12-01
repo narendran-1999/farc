@@ -1,209 +1,157 @@
 ---
-import "../styles/global.css";
+import ContentPageLayout from "../layouts/ContentPageLayout.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Strongest Predictors - FARC</title>
-    </head>
-    <body>
-        <div class="card fade-in" style="max-width: 800px;">
-            <div class="header-row">
-                <a href="/" class="back-link">← Back to Calculator</a>
-                <h1 class="title" style="font-size: 2rem;">
-                    Strongest Predictors
-                </h1>
-            </div>
+<ContentPageLayout
+    title="Strongest Predictors - FARC"
+    pageTitle="Strongest Predictors"
+    subtitle="Based on statistical research and meta-analyses"
+>
+    <div class="section">
+        <h2 class="section-title tier-high">
+            1. Before Interaction (Publicly Observable)
+        </h2>
+        <p class="section-desc">Factors visible without direct interaction.</p>
 
-            <p class="subtitle">
-                Based on statistical research and meta-analyses
-            </p>
-
-            <div class="section">
-                <h2 class="section-title tier-high">
-                    1. Before Interaction (Publicly Observable)
-                </h2>
-                <p class="section-desc">
-                    Factors visible without direct interaction.
-                </p>
-
-                <div class="predictor-list">
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">1</span>
-                            <h3 class="predictor-name">High Sociosexuality</h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Unrestricted openness to casual sex. Visible through
-                            public social behavior, openly casual dating
-                            lifestyle, or stated attitudes.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">2</span>
-                            <h3 class="predictor-name">
-                                Relationship Instability
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Public history of short, unstable, or frequently
-                            changing relationships.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">3</span>
-                            <h3 class="predictor-name">
-                                Impulsivity / Sensation-Seeking
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Lifestyle characterized by constant parties, risky
-                            choices, and extreme novelty chasing.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">4</span>
-                            <h3 class="predictor-name">
-                                Alcohol & Party Culture
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Heavy binge-drinking and strong identification with
-                            nightlife/clubbing culture.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">5</span>
-                            <h3 class="predictor-name">
-                                Narcissistic Self-Presentation
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Excessive self-promotional imagery and
-                            attention-seeking behavior online.
-                        </p>
-                    </div>
+        <div class="predictor-list">
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">1</span>
+                    <h3 class="predictor-name">High Sociosexuality</h3>
                 </div>
-            </div>
-
-            <div class="section mt-8">
-                <h2 class="section-title tier-high">
-                    2. After Interaction (Before Commitment)
-                </h2>
-                <p class="section-desc">
-                    Factors visible after talking/dating but before exclusivity.
+                <p class="predictor-desc">
+                    Unrestricted openness to casual sex. Visible through public
+                    social behavior, openly casual dating lifestyle, or stated
+                    attitudes.
                 </p>
-
-                <div class="predictor-list">
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">1</span>
-                            <h3 class="predictor-name">
-                                Unrestricted Sociosexual Attitudes
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Directly expressed views like "I don't believe in
-                            monogamy" or "I get bored fast".
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">2</span>
-                            <h3 class="predictor-name">
-                                History of Infidelity
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Admission of cheating in past relationships. The
-                            strongest behavioral predictor.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">3</span>
-                            <h3 class="predictor-name">
-                                Low Past Relationship Satisfaction
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Chronically feeling "unfulfilled", "bored", or
-                            "emotionally disconnected" in prior relationships.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">4</span>
-                            <h3 class="predictor-name">
-                                Insecure Attachment Style
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Avoidant (fear of closeness) or Anxious
-                            (clingy/inconsistent) attachment patterns.
-                        </p>
-                    </div>
-
-                    <div class="predictor-item">
-                        <div class="predictor-header">
-                            <span class="predictor-rank">5</span>
-                            <h3 class="predictor-name">
-                                High Perceived Options
-                            </h3>
-                        </div>
-                        <p class="predictor-desc">
-                            Belief in having many romantic options and viewing
-                            relationships as temporary.
-                        </p>
-                    </div>
-                </div>
             </div>
 
-            <div class="footer-links">
-                <a href="/references" class="footer-link"
-                    >View Research Sources</a
-                >
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">2</span>
+                    <h3 class="predictor-name">Relationship Instability</h3>
+                </div>
+                <p class="predictor-desc">
+                    Public history of short, unstable, or frequently changing
+                    relationships.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">3</span>
+                    <h3 class="predictor-name">
+                        Impulsivity / Sensation-Seeking
+                    </h3>
+                </div>
+                <p class="predictor-desc">
+                    Lifestyle characterized by constant parties, risky choices,
+                    and extreme novelty chasing.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">4</span>
+                    <h3 class="predictor-name">Alcohol & Party Culture</h3>
+                </div>
+                <p class="predictor-desc">
+                    Heavy binge-drinking and strong identification with
+                    nightlife/clubbing culture.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">5</span>
+                    <h3 class="predictor-name">
+                        Narcissistic Self-Presentation
+                    </h3>
+                </div>
+                <p class="predictor-desc">
+                    Excessive self-promotional imagery and attention-seeking
+                    behavior online.
+                </p>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+    <div class="section mt-8">
+        <h2 class="section-title tier-high">
+            2. After Interaction (Before Commitment)
+        </h2>
+        <p class="section-desc">
+            Factors visible after talking/dating but before exclusivity.
+        </p>
+
+        <div class="predictor-list">
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">1</span>
+                    <h3 class="predictor-name">
+                        Unrestricted Sociosexual Attitudes
+                    </h3>
+                </div>
+                <p class="predictor-desc">
+                    Directly expressed views like "I don't believe in monogamy"
+                    or "I get bored fast".
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">2</span>
+                    <h3 class="predictor-name">History of Infidelity</h3>
+                </div>
+                <p class="predictor-desc">
+                    Admission of cheating in past relationships. The strongest
+                    behavioral predictor.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">3</span>
+                    <h3 class="predictor-name">
+                        Low Past Relationship Satisfaction
+                    </h3>
+                </div>
+                <p class="predictor-desc">
+                    Chronically feeling "unfulfilled", "bored", or "emotionally
+                    disconnected" in prior relationships.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">4</span>
+                    <h3 class="predictor-name">Insecure Attachment Style</h3>
+                </div>
+                <p class="predictor-desc">
+                    Avoidant (fear of closeness) or Anxious
+                    (clingy/inconsistent) attachment patterns.
+                </p>
+            </div>
+
+            <div class="predictor-item">
+                <div class="predictor-header">
+                    <span class="predictor-rank">5</span>
+                    <h3 class="predictor-name">High Perceived Options</h3>
+                </div>
+                <p class="predictor-desc">
+                    Belief in having many romantic options and viewing
+                    relationships as temporary.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links" slot="footer">
+        <a href="/references" class="footer-link">View Research Sources</a>
+    </div>
+</ContentPageLayout>
 
 <style>
-    .header-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .back-link {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s;
-    }
-
-    .back-link:hover {
-        color: var(--text-primary);
-    }
-
     .section {
         margin-bottom: 3rem;
     }
@@ -281,23 +229,6 @@ import "../styles/global.css";
 
     .mt-8 {
         margin-top: 3rem;
-    }
-
-    .footer-links {
-        margin-top: 3rem;
-        text-align: center;
-        border-top: 1px solid var(--card-border);
-        padding-top: 1.5rem;
-    }
-
-    .footer-link {
-        color: var(--accent-primary);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .footer-link:hover {
-        text-decoration: underline;
     }
 
     @media (max-width: 640px) {

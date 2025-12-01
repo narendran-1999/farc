@@ -299,7 +299,7 @@ body {
 .contributor-pct {
   font-weight: 600;
   color: var(--accent-primary);
-  margin-right: 1rem;
+  padding-left: 1rem;
 }
 
 .contributor-text {

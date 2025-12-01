@@ -1,0 +1,67 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    title: string;
+    pageTitle: string;
+    subtitle?: string;
+    description?: string;
+    backLink?: string;
+}
+
+const { title, pageTitle, subtitle, description, backLink = "/" } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+    <div class="card fade-in" style="max-width: 800px;">
+        <div class="header-row">
+            <a href={backLink} class="back-link">← Back to Calculator</a>
+            <h1 class="title" style="font-size: 2rem;">{pageTitle}</h1>
+        </div>
+
+        {subtitle && <p class="subtitle">{subtitle}</p>}
+
+        <slot />
+
+        <slot name="footer" />
+    </div>
+</BaseLayout>
+
+<style>
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .back-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: var(--text-primary);
+    }
+
+    :global(.footer-links) {
+        margin-top: 3rem;
+        text-align: center;
+        border-top: 1px solid var(--card-border);
+        padding-top: 1.5rem;
+    }
+
+    :global(.footer-link) {
+        color: var(--accent-primary);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    :global(.footer-link:hover) {
+        text-decoration: underline;
+    }
+</style>

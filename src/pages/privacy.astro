@@ -1,76 +1,39 @@
 ---
-import "../styles/global.css";
+import ContentPageLayout from "../layouts/ContentPageLayout.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Privacy - FARC</title>
-    </head>
-    <body>
-        <div class="card fade-in" style="max-width: 800px;">
-            <div class="header-row">
-                <a href="/" class="back-link">← Back to Calculator</a>
-                <h1 class="title" style="font-size: 2rem;">Your Privacy</h1>
-            </div>
-
-            <div class="privacy-content">
-                <div class="privacy-item">
-                    <h2 class="privacy-title">Your Secrets Stay With You</h2>
-                    <p class="privacy-text">
-                        This tool works exactly like a calculator in your hand.
-                        <strong>Your answers never leave your device.</strong>
-                        We cannot see them, and they are not sent to any server.
-                    </p>
-                </div>
-
-                <div class="privacy-item">
-                    <h2 class="privacy-title">Nothing Is Saved</h2>
-                    <p class="privacy-text">
-                        As soon as you close this tab or refresh the page,
-                        <strong>your answers are gone forever.</strong>
-                        We don't use cookies or save any history.
-                    </p>
-                </div>
-
-                <div class="privacy-item">
-                    <h2 class="privacy-title">Safe & Anonymous</h2>
-                    <p class="privacy-text">
-                        This tool was built to be completely private. You can
-                        use it without worrying about anyone tracking you or
-                        spying on your results.
-                    </p>
-                </div>
-            </div>
+<ContentPageLayout title="Privacy - FARC" pageTitle="Your Privacy">
+    <div class="privacy-content">
+        <div class="privacy-item">
+            <h2 class="privacy-title">Your Secrets Stay With You</h2>
+            <p class="privacy-text">
+                This tool works exactly like a calculator in your hand.
+                <strong>Your answers never leave your device.</strong>
+                We cannot see them, and they are not sent to any server.
+            </p>
         </div>
-    </body>
-</html>
+
+        <div class="privacy-item">
+            <h2 class="privacy-title">Nothing Is Saved</h2>
+            <p class="privacy-text">
+                As soon as you close this tab or refresh the page,
+                <strong>your answers are gone forever.</strong>
+                We don't use cookies or save any history.
+            </p>
+        </div>
+
+        <div class="privacy-item">
+            <h2 class="privacy-title">Safe & Anonymous</h2>
+            <p class="privacy-text">
+                This tool was built to be completely private. You can use it
+                without worrying about anyone tracking you or spying on your
+                results.
+            </p>
+        </div>
+    </div>
+</ContentPageLayout>
 
 <style>
-    .header-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .back-link {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s;
-        font-family: var(--font-body);
-    }
-
-    .back-link:hover {
-        color: var(--text-primary);
-    }
-
     .privacy-content {
         display: flex;
         flex-direction: column;
