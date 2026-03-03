@@ -132,13 +132,36 @@
 
 		<div class="disclaimer-box">
 			<p class="disclaimer-text">
-				<strong>Disclaimer:</strong> This tool provides a statistical risk assessment based on behavioral patterns.
-				It is not a definitive judgment of character. The assessment can change in the future with new information.
+				<strong>Disclaimer:</strong>
+				This tool provides a statistical risk assessment based on behavioral patterns.
+				It is not a definitive judgment of character.
+				The assessment can change in the future with new information you provide about the woman.
 			</p>
 		</div>
 
-		<div class="question-section">
+		<div class="link-row text-medium">
+			SUPPORTING ARTICLES
+		</div>
+
+		<div class="link-row mt-6">
+			<a
+				href={withBasePath('predictors')}
+				class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
+			>
+				Strongest Predictors
+			</a>
+
+			<a
+				href={withBasePath('references')}
+				class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
+			>
+				Research Sources
+			</a>
+		</div>
+
+		<div class="question-section mtb-12">
 			<p class="question-text">{FARC_CONFIG.classifierQuestion}</p>
+
 			<div class="options-grid">
 				{#each FARC_CONFIG.classifierOptions as option (option.value)}
 					<button
@@ -149,35 +172,25 @@
 					</button>
 				{/each}
 			</div>
+		</div>
 
-			<div class="link-row mt-8 text-sm">
-				<a
-					href={withBasePath('predictors')}
-					class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
-				>
-					Strongest Predictors
-				</a>
-				<a
-					href={withBasePath('references')}
-					class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
-				>
-					Research Sources
-				</a>
-				<a
-					href={withBasePath('privacy')}
-					class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
-				>
-					Privacy
-				</a>
-			</div>
+		<div class="link-row text-sm mt-8">
+			<a
+				href={withBasePath('privacy')}
+				class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
+			>
+				Privacy Notice
+			</a>
 		</div>
 	</div>
 {:else if screen === 'results' && interactionLevel === 'none'}
 	<div class="card fade-in">
 		<h2 class="title">Assessment Not Possible</h2>
+
 		<p class="result-description">
 			Without sufficient information (public or personal), an accurate risk assessment cannot be made.
 		</p>
+
 		<button class="btn btn-secondary mt-6" onclick={handleRestart}>
 			Start Over
 		</button>
@@ -190,6 +203,7 @@
 			<div class="score-circle {tierData.class}">
 				<span class="score-value">{score}</span>
 			</div>
+
 			<div class="tier-label">
 				Risk Tier: <span class="tier-text {tierData.class}">{tierData.label}</span>
 			</div>
@@ -200,6 +214,7 @@
 				<h4 class="detail-title">What this means:</h4>
 				<p class="detail-text">{tierData.desc}</p>
 			</div>
+
 			<div class="detail-item caution-item">
 				<h4 class="detail-title">Cautionary Measure:</h4>
 				<p class="detail-text">{tierData.caution}</p>
@@ -209,6 +224,7 @@
 		{#if contributors.length > 0}
 			<div class="contributors-section">
 				<h3 class="section-title">Top Risk Factors</h3>
+
 				<ul class="contributors-list">
 					{#each contributors as item, idx (idx)}
 						<li class="contributor-item">
@@ -231,12 +247,14 @@
 			>
 				Strongest Predictors
 			</a>
+
 			<a
 				href={withBasePath('references')}
 				class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
 			>
 				Research Sources
 			</a>
+
 			<a
 				href={withBasePath('privacy')}
 				class="link-row__item text-blue-400 hover:text-blue-300 transition-colors"
@@ -248,7 +266,6 @@
 {:else if screen === 'question'}
 	<div class="card slide-up">
 		<ProgressBar current={currentQuestionIndex} total={questions.length} />
-
 		<h2 class="question-text mb-8">{currentQuestion.text}</h2>
 
 		<div class="options-stack">

@@ -367,12 +367,21 @@ body {
   font-size: 0.875rem;
 }
 
+.text-medium {
+  font-weight: 600;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mtb-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .text-blue-400 {
