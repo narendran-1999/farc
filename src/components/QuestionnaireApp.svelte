@@ -95,7 +95,7 @@
 				label: 'High Risk',
 				class: 'tier-high',
 				desc: 'Strong warning signs. Her profile matches women who have a pattern of unstable relationships, pulling away when things get close (avoidant), or high sexual self-centeredness (narcissism).',
-				caution: 'High chance of history repeating. Past behavior and these traits are strong predictors. Proceed only if you accept high volatility and potential for emotional distance.'
+				caution: 'High chance of history repeating. Past behavior and these traits are strong predictors.'
 			};
 		}
 		if (score >= 40) {
@@ -111,7 +111,7 @@
 				label: 'Low-Moderate Risk',
 				class: 'tier-moderate',
 				desc: 'A few minor concerns. She might seek attention or validation sometimes, but there are no deep signs of instability or emotional distance.',
-				caution: 'Watch and wait. Don\'t ignore the small flags. See if they disappear or get worse under stress or if she becomes distant.'
+				caution: 'Watch and wait. Don\'t ignore the small red flags. See if they disappear or get worse under stress or if she becomes distant.'
 			};
 		}
 		return {
