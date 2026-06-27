@@ -127,8 +127,8 @@
 
 {#if screen === 'welcome'}
 	<div class="card fade-in">
-		<h1 class="title">FARC</h1>
-		<p class="subtitle">Female Adultery Risk Calculator</p>
+		<h1 class="title">Female Adultery Risk Calculator</h1>
+		<p class="subtitle">Protect yourself from unsafe commitments</p>
 
 		<div class="disclaimer-box">
 			<p class="disclaimer-text">
