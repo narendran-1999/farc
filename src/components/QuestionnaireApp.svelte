@@ -127,7 +127,7 @@
 
 {#if screen === 'welcome'}
 	<div class="card fade-in">
-		<h1 class="title">Female Adultery Risk Calculator</h1>
+		<h1 class="title">Female Adultery Risk Assessor</h1>
 		<p class="subtitle">Protect yourself from unsafe commitments</p>
 
 		<div class="disclaimer-box">
